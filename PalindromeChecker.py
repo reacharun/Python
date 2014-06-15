@@ -8,21 +8,21 @@
 
 
 # Function that runs the palindrome program
-def runPalindrome (word):
+def run_palindrome(word):
 
-    revIndex     = -1     # keep track of the index in reverse
-    isPalindrome = True   # set the default value to True
+    rev_index     = -1     # keep track of the index in reverse
+    is_palindrome = True   # set the default value to True
 
-    for i in range (len(word) // 2): # We only need to look at half of the string
-        if word[i] != word[revIndex]:
-            isPalindrome = False
+    for i in range(len(word) // 2): # We only need to look at half of the string
+        if word[i] != word[rev_index]:
+            is_palindrome = False
             break # break from the loop
-        revIndex -= 1
+        rev_index -= 1
 
-    if isPalindrome:
-     print ("The word \"", word, "\" is indeed a palindrome!")
+    if is_palindrome:
+     print("The word \"", word, "\" is indeed a palindrome!")
     else:
-     print ("The word is not a palindrome!")
+     print("The word is not a palindrome!")
 
 # end
 
@@ -30,8 +30,8 @@ def runPalindrome (word):
 # main function
 def main():
     word = input("Enter a word to see if it is palindrome!")
-    runPalindrome(word)
+    run_palindrome(word)
 # end
 
-# run main function
+# call the main function
 main()
